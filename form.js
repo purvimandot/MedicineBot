@@ -1,4 +1,4 @@
-const SurveyCard=require('./survey');
+
 exports.Form = function() {
 	
 	var s = {
@@ -40,7 +40,11 @@ exports.Form = function() {
                             {
                                 "type": "Input.Text",
                                 "id": "myName",
-                                "placeholder": "First,Last"
+                                "placeholder": "First,Last",
+                                "validation": {
+                                    "necessity": "required",
+                                    "errorMessage": "Name is required"
+                                  }
                             },
                             {   
                                 "type": "TextBlock",
@@ -51,7 +55,11 @@ exports.Form = function() {
                                 "type": "Input.Text",
                                 "id": "myEmail",
                                 "placeholder": "youremail@example.com",
-                                "style": "Email"
+                                "style": "Email",
+                                "validation": {
+                                    "necessity": "required",
+                                    "errorMessage": "Email is required"
+                                  }
                             },
                             {
                                 "type": "TextBlock",
@@ -61,7 +69,11 @@ exports.Form = function() {
                                 "type": "Input.Text",
                                 "id": "myTel",
                                 "placeholder": "xxx.xxx.xxx",
-                                "style": "Tel"
+                                "style": "Tel",
+                                "validation": {
+                                    "necessity": "required",
+                                    "errorMessage": "Phone number is required"
+                                  }
                             },
                             {
                                 "type": "TextBlock",
@@ -75,6 +87,10 @@ exports.Form = function() {
                                 "type": "Input.ChoiceSet",
                                 "id": "radio",
                                 "placeholder": "Placeholder text",
+                                "validation": {
+                                    "necessity": "required",
+                                    "errorMessage": "Plz select your gender"
+                                  },
                                 "choices": [
                                     {
                                         "title": "Male",
@@ -96,7 +112,10 @@ exports.Form = function() {
         "actions": [
             {
                 "type": "Action.Submit",
-                "title": "Submit"
+                "title": "Submit",
+                "requiredInputs": [
+                    "myEmail","myTel","myName"
+                  ]
             }
         ]
     };
