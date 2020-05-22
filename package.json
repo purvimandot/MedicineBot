@@ -1,25 +1,27 @@
 {
-    "name": "demobot",
+    "name": "core-bot",
     "version": "1.0.0",
-    "description": "Demonstrate the core capabilities of the Microsoft Bot Framework",
-    "author": "Generated using Microsoft Bot Builder Yeoman generator v4.7.0",
+    "description": "A bot that demonstrates core AI capabilities",
+    "author": "Microsoft",
     "license": "MIT",
     "main": "index.js",
     "scripts": {
         "start": "node ./index.js",
         "watch": "nodemon ./index.js",
         "lint": "eslint .",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"ERROR :no test specified\"&& exit 1"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com"
     },
     "dependencies": {
-        "botbuilder": "~4.7.0",
-        "botbuilder-dialogs": "^4.8.0",
+        "@microsoft/recognizers-text-data-types-timex-expression": "^1.1.4",
+        "botbuilder": "~4.8.0",
+        "botbuilder-ai": "~4.8.0",
+        "botbuilder-dialogs": "~4.8.0",
+        "botbuilder-testing": "~4.8.0",
         "dotenv": "^8.2.0",
-        "mysql": "^2.18.1",
         "restify": "~8.4.0"
     },
     "devDependencies": {

@@ -1,6 +1,6 @@
 const { ActivityHandler } = require('botbuilder');
 
-class bot extends ActivityHandler {
+class MedicineBot extends ActivityHandler {
     /**
      *
      * @param {ConversationState} conversationState
@@ -40,4 +40,4 @@ class bot extends ActivityHandler {
     }
 }
 
-module.exports.bot = bot;
+module.exports.MedicineBot = MedicineBot;
