@@ -58,7 +58,7 @@ class OrderMedicineDialog extends ComponentDialog {
         }
         return await stepContext.next(medicineDetails.FormType);
     }
-
+                             
     /**
      * If a travel date has not been provided, prompt for one.
      * This will use the DATE_RESOLVER_DIALOG.

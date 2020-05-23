@@ -35,28 +35,28 @@ class GetMedicineRecogniser {
         //    fromAirportValue = result.entities.From[0].Airport[0][0];
         //}
 
-        return { brandValue};
+        return  brandValue;
     }
 
     getFormType(result) {
         let FormTypeValue;
-        if (result.entities.$instance.FormType) {
-            FormTypeValue = result.entities.$instance.FormType[0].text;
+        if (result.entities.$instance.Form_Type) {
+            FormTypeValue = result.entities.$instance.Form_Type[0].text;
         }
-
-        return { FormTypeValue};
+        //console.log("inside get form",result,result.entities.$instance.Form_Type,FormTypeValue,result.entities.$instance.Form_Type[0].text)
+        return  FormTypeValue;
     }
 
     getStrengthofMedicine(result) {
-        let strengthValue, strengthNumberValue;
-        if (result.entities.$instance.StrengthofMedicine) {
-            strengthValue = result.entities.$instance.StrengthofMedicine[0].text;
+        let strengthValue;
+        if (result.entities.$instance.number) {
+            strengthValue = result.entities.$instance.number[0].text;
         }
-        if (strengthValue && result.entities.StrengthofMedicine[0].number) {
-            strengthNumberValue = result.entities.StrengthofMedicine[0].number[0][0];
-        }
-
-        return { strengthValue,strengthNumberValue };
+        // if (strengthValue && result.entities.StrengthofMedicine[0].number) {
+        //    strengthNumberValue = result.entities.StrengthofMedicine[0].number;
+        // }
+        //console.log("inside get form",result.entities.$instance.StrengthofMedicine,result.entities.$instance.number[0].text)
+        return strengthValue ;
     }
 }
 
